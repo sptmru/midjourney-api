@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  midjourney:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command:
+      "npm run api"
+    ports:
+      - "8080:80"
+    restart: always
